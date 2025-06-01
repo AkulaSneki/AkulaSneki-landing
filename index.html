@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Снеки с доставкой</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#facc15">
+  <link rel="icon" type="image/png" href="icons/icon-192.png">
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('service-worker.js')
+        .then(() => console.log('Service Worker зарегистрирован'));
+    }
+  </script>
+</head>
+<body class="bg-yellow-50 text-gray-800">
+  <section class="bg-yellow-100 py-12 text-center">
+    <h1 class="text-4xl font-bold mb-4">Свежие снеки с доставкой</h1>
+    <p class="text-lg">Попробуй вкусные чипсы, орешки, сухарики и многое другое!</p>
+    <a href="#order" class="mt-6 inline-block bg-yellow-500 hover:bg-yellow-600 text-white px-6 py-3 rounded-full font-semibold transition">Заказать сейчас</a>
+  </section>
+
+  <section class="py-12 px-4 max-w-6xl mx-auto">
+    <h2 class="text-2xl font-bold text-center mb-8">Популярные снеки</h2>
+    <div class="grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
+      <div class="bg-white rounded-lg shadow-md overflow-hidden">
+        <img src="https://via.placeholder.com/400x250?text=Чипсы" alt="Чипсы" class="w-full">
+        <div class="p-4">
+          <h3 class="font-bold text-lg">Картофельные чипсы</h3>
+          <p class="text-sm text-gray-600">С солью и специями</p>
+        </div>
+      </div>
+      <div class="bg-white rounded-lg shadow-md overflow-hidden">
+        <img src="https://via.placeholder.com/400x250?text=Орешки" alt="Орешки" class="w-full">
+        <div class="p-4">
+          <h3 class="font-bold text-lg">Жареные орешки</h3>
+          <p class="text-sm text-gray-600">Сладкие и солёные варианты</p>
+        </div>
+      </div>
+      <div class="bg-white rounded-lg shadow-md overflow-hidden">
+        <img src="https://via.placeholder.com/400x250?text=Сухарики" alt="Сухарики" class="w-full">
+        <div class="p-4">
+          <h3 class="font-bold text-lg">Хрустящие сухарики</h3>
+          <p class="text-sm text-gray-600">С чесноком и сыром</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-yellow-200 py-12">
+    <div class="max-w-5xl mx-auto px-4 text-center">
+      <h2 class="text-2xl font-bold mb-6">Почему выбирают нас?</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-left">
+        <div>
+          <h3 class="font-semibold text-lg">🚚 Быстрая доставка</h3>
+          <p>Доставляем в течение дня по городу и ближайшим районам</p>
+        </div>
+        <div>
+          <h3 class="font-semibold text-lg">🍴 Всегда свежие снеки</h3>
+          <p>Работаем только с проверенными поставщиками</p>
+        </div>
+        <div>
+          <h3 class="font-semibold text-lg">💰 Выгодные цены</h3>
+          <p>Регулярные акции и скидки для постоянных клиентов</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="order" class="py-12 px-4 bg-white">
+    <div class="max-w-xl mx-auto">
+      <h2 class="text-2xl font-bold mb-6 text-center">Оформить заказ</h2>
+      <form class="space-y-4">
+        <input type="text" placeholder="Ваше имя" class="w-full p-3 border rounded" required />
+        <input type="tel" placeholder="Телефон" class="w-full p-3 border rounded" required />
+        <textarea placeholder="Что хотите заказать?" class="w-full p-3 border rounded" rows="4"></textarea>
+        <button type="submit" class="w-full bg-yellow-500 text-white p-3 rounded hover:bg-yellow-600 transition">Отправить</button>
+      </form>
+    </div>
+  </section>
+
+  <footer class="bg-yellow-100 py-6 text-center text-sm">
+    <p>© 2025 Снеки Онлайн | г. Москва | <a href="tel:+79999999999" class="underline">+7 (999) 999-99-99</a></p>
+  </footer>
+</body>
+</html>
